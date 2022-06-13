@@ -27,6 +27,7 @@ function App() {
       console.log(data.data);
       dispatch(addUsers({ users: data.data, totalPages: data.total_pages }));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoading, error, data]);
 
   return loading ? (
